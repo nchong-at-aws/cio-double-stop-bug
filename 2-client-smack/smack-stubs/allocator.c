@@ -25,22 +25,22 @@ struct aws_allocator *aws_default_allocator(void) {
 }
 
 void *aws_mem_acquire(struct aws_allocator *allocator, size_t size) {
-    assert(allocator == &default_allocator);
+    //assert(allocator == &default_allocator);
     return malloc(size);
 }
 
 void aws_mem_release(struct aws_allocator *allocator, void *ptr) {
-    assert(allocator == &default_allocator);
+    //assert(allocator == &default_allocator);
     free(ptr);
 }
 
 void *aws_mem_calloc(struct aws_allocator *allocator, size_t num, size_t size) {
-    assert(allocator == &default_allocator);
+    //assert(allocator == &default_allocator);
     return calloc(num, size);
 }
 
 int aws_mem_realloc(struct aws_allocator *allocator, void **ptr, size_t oldsize, size_t newsize) {
-    assert(allocator == &default_allocator);
+    //assert(allocator == &default_allocator);
     *ptr = realloc(*ptr, newsize);
     return 0;
 }
