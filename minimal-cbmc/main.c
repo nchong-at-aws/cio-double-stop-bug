@@ -3,10 +3,13 @@
  */
 
 #include <pthread.h>
-#include <stdlib.h>
 #include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 
-#define assume(x) __VERIFIER_assume(x)
+#define assert(x) __CPROVER_assert(x,"")
+#define assume(x) __CPROVER_assume(x)
 
 // Fake-up aws_atomic {{{
 #if FIX
