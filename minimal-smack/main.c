@@ -4,8 +4,9 @@
 
 #include <smack.h>
 #include <pthread.h>
-#include <stdlib.h>
 #include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
 #include <string.h>
 
 // Fake-up zero object {{{
